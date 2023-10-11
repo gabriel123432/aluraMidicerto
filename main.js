@@ -18,8 +18,13 @@ function tocaSom(idElementoAudio){
     tecla.onkeyup = function () {
         tecla.classList.remove('ativa');
     }
+    tecla.onkeydown = function (evento)  
+        console.log (evento.code === 'Enter');
+        if (evento.code === 'Enter' || evento.code === Space ) {
+            tecla.classList.add('ativa');}
+        
     
-    }
+    
 
     
 
